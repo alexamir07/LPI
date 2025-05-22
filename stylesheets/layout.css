@@ -17,7 +17,67 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+/* главная */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.fixed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/arm.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.scroll-shape {
+    width: 1280px;
+    height: 1282px;
+    background: url("../images/steklo.png") no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.content-section {
+    height: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.fixed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/arm.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+  
+}
+
+.scroll-shape {
+    width: 1280px;
+    height: 1282px;
+    background: url("../images/steklo.png") no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+   
+}
 /* 404 */
 .error-page {
     margin: 0;
