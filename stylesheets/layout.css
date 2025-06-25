@@ -3,6 +3,7 @@
 }
 :root {
     --font-size-medium:7.5vw;
+    --font-size-small:5vw;
 
 }
 body {
@@ -26,6 +27,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: end;
+    position: relative;
+}
+.burger-menu {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    background: none;
+    border: none;
 }
 .container {
     display: flex;
@@ -112,6 +121,9 @@ padding: 2vw 0;
 .nout-img {
     width: 70%;
 }
+.laboratory {
+    margin-block-end: 15vw;
+}
 .laboratory-info {
     width: 95%;
     margin: 0 auto;
@@ -136,4 +148,113 @@ padding: 2vw 0;
     width: 100%;
     padding: 3vw 0;
     font-size: 5vw;
+}
+.intresting {
+    margin-block-end: 15vw;
+}
+.intresting h2 {
+    font-weight: 700;
+    font-size: 14vw;
+    margin-block-end: 1.5vw;
+    text-align: center;
+}
+.intresting-things-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7vw;
+    width: 95%;
+    margin: 0 auto;
+}
+.intresting-thing {
+    background-color: #FDC2F6;
+    height: 150vw;
+    padding: 7vw 3vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.intresting-thing p {
+    font-family: 'PlayenSans-Regular', Arial, sans-serif;
+    font-size: var(--font-size-small);
+    margin-block-end: 3vw;
+}
+.telefon {
+width: 50%;
+position: absolute;
+top: 15%;
+left: 40%;
+}
+.skotch {
+width: 30%;
+position: absolute;
+top: 45%;
+left: 10%;
+}
+.tetrad {
+width: 50%;
+position: absolute;
+top: 55%;
+left: 40%;
+}
+.intresting button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 2vw 0;
+}
+.plakat1 {
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+
+.plakat2 {
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.calendar {
+    width: 55%;
+    position: absolute;
+    top: 55%;
+    left: 40%;   
+}
+
+footer {
+    background-image: url(../images/Gradient.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65vh;
+    padding: 13vw 3vw;
+    display: flex;
+    justify-content: space-between;
+}
+footer h2 {
+    font-weight: 700;
+    color: white;
+    font-size: 20vw;
+    margin-block-end: 3vw;
+    line-height: 0.6;
+}
+footer p {
+    font-size: var(--font-size-small);
+    color: white;
+}
+.footer-info {
+    flex: 3;
+}
+
+nav {
+    align-self: center;
+    flex: 3;
+    margin: 0 auto;
+}
+.poloska {
+    align-self: flex-end;
+    flex: 1;
+    color:white ;
 }
