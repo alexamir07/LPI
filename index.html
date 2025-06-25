@@ -5,25 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лаборатория Пограничных Исследований</title>
     <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="javascript/scripts.js"></script>
+    <link rel="preload" href="./fonts/BebasNeue-Bold.ttf" as="font" type="font/truetype" crossorigin>
+    <link rel="preload" href="./fonts/BebasNeue-Regular.ttf" as="font" type="font/truetype" crossorigin>
+    <link rel="preload" href="./fonts/PlayenSans-Regular.ttf" as="font" type="font/truetype" crossorigin>
 </head>
 <body>
-    <nav>
-        <div class="main-menu">
-            <a href="index.html">главная</a>
-            <div class="links">
-                <a href="shop.html">магазин</a>
-                <a href="events.html">афиша</a>
-                <a href="laboratory.html">лаборатория</a>
-                <a href="putevod.html">путеводитель</a>
-                <a href="kids.html">для детей</a>
-            </div>
+    <header>
+        <div class="container">
+            <div class="logo">ЛПИ</div>
+            <p class="rasshifrovka">лаборатория пограничных исследований</p>
+            <button class="podrobnee">узнать о лаборатории и альтернативах</button>
         </div>
-    </nav>
-    <h1>главная</h1>
-    <div class="fixed-background"></div>
-    
-    <div class="scroll-shape"></div>
-</nav>
+    </header>
+    <main>
+        <section class="alternat">
+            <h2>альтернативы</h2>
+            <div class="alternat-container">
+                <div class="cartochka">
+                    <div class="cartochka-info">
+                        <h3>зафиксированные случаи</h3>
+                        <p>Собрание реальных инцидентов, произошедших на границах. архив включает заметки кураторов, аудиофрагменты и схемы</p>
+                    </div>
+                    <img class="kniga-img" src="./images/kniga.webp" alt="книга">
+                    <button>почитать подробнее</button>
+                </div>
+                <div class="cartochka">
+                    <div class="cartochka-info">
+                        <h3>экскурсия по лаборатории</h3>
+                        <p>Зоны, протоколы и маршруты — узнайте, как устроена лаборатория изнутри</p>
+                    </div>
+                    
+                    <img class="holl-img" src="./images/hol.webp" alt="холл">
+                    <button>почитать подробнее</button>
+                </div>
+                <div class="cartochka">
+                    <div class="cartochka-info">
+                        <h3>детский путеводитель</h3>
+                        <p>Объяснить ребёнку, кто такие альтернативы — непросто. Мы сделали это за вас: безопасно, понятно и в игровой форме</p>
+                    </div>
+                    <img class="nout-img" src="./images/nout.webp" alt="ноутбук">
+                    <button>перейти в детский раздел</button>
+                </div>
+            </div>
+        </section>
+        <section class="laboratory">
+            <div class="laboratory-info">
+                <h2>лаборатория</h2>
+                <p>Лаборатория появилась после первых задокументированных случаев взаимодействия с альтернативными версиями личности. Сегодня это центр изучения, наблюдения и сдерживания отражённых. Мы фиксируем аномалии, разрабатываем протоколы и обучаем кураторов по всему миру.</p>
+                <p>Если вы хотите узнать, как устроена работа внутри и что делать при зеркальном контакте — откройте полный путеводитель</p>
+                <button>посмотреть путеводитель</button>
+            </div>
+            <img src="./images/lpi.webp" alt="лаборатория">
+        </section>
+        <section class="intresting">
+            <h2>что интересного?</h2>
+            <div class="intresting-things-container">
+                <div class="intresting-thing left-thing">
+                    <p>носите знаки пограничья. фирменные значки, футболки, постеры и архивные предметы доступны для заказа</p>
+                    <img src="./images/telefon.webp" alt="телефон">
+                    <img src="./images/scotch.webp" alt="скотч">
+                    <img src="./images/zapiska.webp" alt="тетрадь">
+                    <button>купить мерч</button>
+                </div>
+                <div class="intresting-thing right-thing">
+                    <p>лекции, выставки, разборы инцидентов — следите за активностями лаборатории в открытых зонах</p>
+                    <img src="./images/plakat2.webp" alt="плакат1">
+                    <img src="./images/plakat1.webp" alt="плакат2">
+                    <img src="./images/kalendar.webp" alt="календарь">
+                    <button>посмотреть афишу мероприятий</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>ЛПИ</h2>
+        <p>лаборатория пограничных исследований</p>
+        <nav>
+            <ul>
+                <li><a href="shop.html">магазин</a></li>
+                <li><a href="">афиша</a></li>
+                <li><a href="">лаборатория</a></li>
+                <li><a href="">путеводитель</a></li>
+                <li><a href="">для детей</a></li>
+            </ul>
+        </nav>
+        <p>2025 @lpi</p>
+    </footer>
+<script src="javascript/scripts.js"></script>
 </body>
 </html>
