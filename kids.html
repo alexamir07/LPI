@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Для детей</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="javascript/scripts.js"></script>
-</head>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link
+      rel="preload"
+      href="./fonts/BebasNeue-Bold.ttf"
+      as="font"
+      type="font/truetype"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/BebasNeue-Regular.ttf"
+      as="font"
+      type="font/truetype"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/PlayenSans-Regular.ttf"
+      as="font"
+      type="font/truetype"
+      crossorigin
+    />
+  </head>
 
-<body>
-    <nav>
-        <div class="main-menu">
-            <a href="index.html">главная</a>
-            <div class="links">
-                <a href="shop.html">магазин</a>
-                <a href="events.html">афиша</a>
-                <a href="laboratory.html">лаборатория</a>
-                <a href="putevod.html">путеводитель</a>
-                <a href="kids.html">для детей</a>
-            </div>
+  <body>
+    <header class="kids-header">
+        <div class="container kids-container">
+          <div class="logo kids-logo">дом зеркал</div>
+          <p class="rasshifrovka kids-rasshifrovka">интерактивный веб-плакат с поучительной историей для детей</p>
+          <button class="podrobnee">играть</button>
         </div>
-    </nav>
-    <h1>для детей</h1>
-</body>
-
+        <button class="burger-menu">
+          <img src="./images/Menu.svg" alt="бургер" />
+        </button>
+      </header>
+      <script src="javascript/scripts.js"></script>
+      <main class="about-game">
+        <div class="about-game-left">
+            <h2>о чем игра?</h2>
+            <p>Интерактивный плакат «Дом зеркал» представляет собой визуальный рассказ о девочке, которая, ведомая любопытством, оказывается в заброшенном доме, где зеркала скрывают не просто отражения, а альтернативные версии её самой. Плакат состоит из четырёх блоков, каждый из которых раскрывает часть этой истории.</p>
+            <p>Важно, чтобы дети играли в такие интерактивные игры, так как они помогают им понять, что не всё, что кажется знакомым, безопасно. Через визуальный и интерактивный опыт дети учатся быть осторожными с незнакомыми ситуациями и понимать, что за внешним сходством могут скрываться опасности.</p>
+        </div>
+        <img class="nout-devochka" src="./images/nout2.webp" alt="ноут">
+            <p>Таким образом, игра способствует развитию критического мышления и осторожности у детей, что особенно важно в современном мире, полном информации и образов, которые могут быть обманчивыми</p>
+        <img class="mockapchic-telefon" src="./images/mockap.webp" alt="мокап1">
+        <p>Это интерактивная история о том, как не потеряться среди отражений. ребёнок вместе с героиней проходит через серии зеркал, учится распознавать альтернатив и выбирать безопасный путь. плакат можно открыть прямо на телефоне или планшете — он адаптирован для экранов и удобно читается с любого устройства. подходит для самостоятельного просмотра или в сопровождении взрослого.</p>
+        <div class="play-container">
+            <button>играть</button>
+        </div>
+        </main>
+        <footer>
+            <div class="footer-info">
+              <h2>ЛПИ</h2>
+              <p>лаборатория пограничных исследований</p>
+            </div>
+            <div class="poloska">2025 @lpi</div>
+            <nav>
+              <ul>
+                <li><a href="shop.html">магазин</a></li>
+                <li><a href="">афиша</a></li>
+                <li><a href="">лаборатория</a></li>
+                <li><a href="">путеводитель</a></li>
+                <li><a href="">для детей</a></li>
+              </ul>
+            </nav>
+          </footer>
+  </body>
 </html>

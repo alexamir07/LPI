@@ -6,23 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Путеводитель</title>
     <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="javascript/scripts.js"></script>
+ 
+    <link
+    rel="preload"
+    href="./fonts/BebasNeue-Bold.ttf"
+    as="font"
+    type="font/truetype"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="./fonts/BebasNeue-Regular.ttf"
+    as="font"
+    type="font/truetype"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="./fonts/PlayenSans-Regular.ttf"
+    as="font"
+    type="font/truetype"
+    crossorigin
+  />
 </head>
 
 <body>
-    <nav>
-        <div class="main-menu">
-            <a href="index.html">главная</a>
-            <div class="links">
-                <a href="shop.html">магазин</a>
-                <a href="events.html">афиша</a>
-                <a href="laboratory.html">лаборатория</a>
-                <a href="putevod.html">путеводитель</a>
-                <a href="kids.html">для детей</a>
-            </div>
+    <header class="putevod-header">
+        <div class="container">
+          <div class="logo putevod-logo">путеводитель</div>
+          <p class="rasshifrovka">лаборатория пограничных исследований</p>
+          <button class="podrobnee">почитать путеводитель</button>
         </div>
-    </nav>
-    <h1>путеводитель</h1>
+        <button class="burger-menu">
+          <img src="./images/Menu.svg" alt="бургер" />
+        </button>
+      </header>
+      <main class="putevod-main">
+        <div class="putevod-info">
+            <h2>о чем путеводитель?</h2>
+            <img class="putevod-page1" src="./images/page1.webp" alt="страница 1">
+            <p>Путеводитель «Лаборатория Пограничных Исследований» представляет собой не просто сборник фактов, а рабочий инструмент куратора, помогающий ориентироваться в Лаборатории Пограничных Исследований. </p>
+            <p>Он содержит не только информацию о разломе и катастрофе, изменившей мир, но и подробно объясняет принципы работы лаборатории, её зонирование, технологические процессы и правила взаимодействия с альтернативами</p>
+        </div>
+        <div class="gallery-grid">
+            <img class="putevod-page2" src="./images/page2.webp" alt="страница 2">
+            <img class="putevod-page3" src="./images/page3.webp" alt="страница 3">
+            <img class="putevod-page4" src="./images/page4.webp" alt="страница 4">
+            <p>Важно ознакомиться с этим путеводителем, поскольку он предоставляет структурированное понимание текущей ситуации и методов работы с альтернативными версиями. Это особенно актуально в условиях, когда взаимодействие с альтернативами может повлиять на стабильность реальности.</p>
+            <p>Путеводитель служит навигационным инструментом для специалистов и заинтересованных лиц, обеспечивая доступ к необходимой информации для безопасного и эффективного взаимодействия с альтернативными сущностями.</p>
+            <img class="putevod-page5" src="./images/page5.webp" alt="страница 5">
+            <img class="putevod-page6" src="./images/page6.webp" alt="страница 6">
+            <img class="putevod-page7" src="./images/page7.webp" alt="страница 7">
+            <button>посмотреть путеводитель</button>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-info">
+          <h2>ЛПИ</h2>
+          <p>лаборатория пограничных исследований</p>
+        </div>
+        <div class="poloska">2025 @lpi</div>
+        <nav>
+          <ul>
+            <li><a href="shop.html">магазин</a></li>
+            <li><a href="">афиша</a></li>
+            <li><a href="">лаборатория</a></li>
+            <li><a href="">путеводитель</a></li>
+            <li><a href="">для детей</a></li>
+          </ul>
+        </nav>
+      </footer>
+    <script src="javascript/scripts.js"></script>
+    
 </body>
 
 </html>

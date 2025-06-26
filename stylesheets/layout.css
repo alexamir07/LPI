@@ -1,260 +1,394 @@
-*,*::after,*::before {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 :root {
-    --font-size-medium:7.5vw;
-    --font-size-small:5vw;
-
+  --font-size-medium: 7.5vw;
+  --font-size-small: 5vw;
+  --font-size-big: 14vw;
 }
 body {
-    font-family: 'BebasNeue', Arial, sans-serif;
-    font-weight: 400;
+  font-family: "BebasNeue", Arial, sans-serif;
+  font-weight: 400;
+}
+p {
+  font-family: "PlayenSans-Regular", Arial, sans-serif;
+  font-weight: 400;
 }
 img {
-    max-width: 100%;
-        height: auto;
-        display: block;
-    }
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 button {
-    font-family: 'BebasNeue', Arial, sans-serif;
+  font-family: "BebasNeue", Arial, sans-serif;
 }
 header {
-    background-image: url(../images/altushki.webp);
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 120vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    position: relative;
+  background-image: url(../images/altushki.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header nav {
+  display: none;
 }
 .burger-menu {
-    position: absolute;
-    right: 2%;
-    top: 2%;
-    background: none;
-    border: none;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background: none;
+  border: none;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 82vw;
-    height: 80vh;
-
+  display: flex;
+  flex-direction: column;
+  width: 82vw;
+  height: 80vh;
+  margin-block-start: 40vw;
 }
 .logo {
-    font-weight: 700;
-    color: white; 
-    font-size: 50vw;
-    text-align: center;
-    margin-block-end: 3vw;
-    line-height: 0.6;
+  font-weight: 700;
+  color: white;
+  font-size: 50vw;
+  text-align: center;
+  margin-block-end: 3vw;
+  line-height: 0.6;
 }
 .rasshifrovka {
-    font-size: var(--font-size-medium);
-    color: white;
-    text-align: center;
-    margin-block-end: 32vw;
-
+  font-size: var(--font-size-medium);
+  color: white;
+  text-align: center;
+  margin-block-end: 32vw;
 }
 .podrobnee {
-    background-color: black;
-    border: 1px solid white;
-    color: white;
-    padding: 3vw 0;
-    font-size: 5vw;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  padding: 3vw 0;
+  font-size: 5vw;
 }
 .alternat {
-    background-color: black;
-    padding: 17vw 3.5vw;
-    margin-block-end: 15vw;
+  background-color: black;
+  padding: 17vw 3.5vw;
+  margin-block-end: 15vw;
 }
 .alternat h2 {
-    display: none;
-    
+  display: none;
 }
 .alternat-container {
-    display: flex;
-    flex-direction: column;
-    gap: 9vw;
+  display: flex;
+  flex-direction: column;
+  gap: 9vw;
 }
 .cartochka {
-    background-image: url(../images/kartochka.webp);
-    height: 92vw;
-    width: 93vw;
-    display: flex;
-    flex-direction: column;
-    padding: 6vw 10vw;
-    align-items: center;
-    justify-content: space-between;
+  background-image: url(../images/kartochka.webp);
+  height: 92vw;
+  width: 93vw;
+  display: flex;
+  flex-direction: column;
+  padding: 6vw 10vw;
+  align-items: center;
+  justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .cartochka-info {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5vw;
 }
 .cartochka-info h3 {
-    color: black;
-    font-weight: 700;
-    font-size: var(--font-size-medium);
+  color: black;
+  font-weight: 700;
+  font-size: var(--font-size-medium);
 }
 .cartochka-info p {
-    font-family: 'PlayenSans-Regular', Arial, sans-serif;
-    text-align: center;
-    font-size: 3vw;
+  font-family: "PlayenSans-Regular", Arial, sans-serif;
+  text-align: center;
+  font-size: 3vw;
 }
 .cartochka button {
-width: 100%;
-background-color: black;
-color: white;
-font-family: 'BebasNeue', Arial, sans-serif;
-padding: 2vw 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "BebasNeue", Arial, sans-serif;
+  padding: 2vw 0;
 }
 .kniga-img {
-    width: 80%;
+  width: 80%;
 }
 .holl-img {
-    width: 50%;
+  width: 50%;
 }
 .nout-img {
-    width: 70%;
+  width: 70%;
 }
 .laboratory {
-    margin-block-end: 15vw;
+  margin-block-end: 15vw;
 }
 .laboratory-info {
-    width: 95%;
-    margin: 0 auto;
-    margin-block-end: 13vw;
+  width: 95%;
+  margin: 0 auto;
+  margin-block-end: 13vw;
 }
 .laboratory-info h2 {
-    font-weight: 700;
-    font-size: 14vw;
-    margin-block-end: 1.5vw;
-    text-align: center;
+  font-weight: 700;
+  font-size: 14vw;
+  margin-block-end: 1.5vw;
+  text-align: center;
 }
 .laboratory-info p {
-    font-family: 'PlayenSans-Regular', Arial, sans-serif;
-    font-size: 5vw;
-    margin-block-end: 3vw;
+  font-family: "PlayenSans-Regular", Arial, sans-serif;
+  font-size: 5vw;
+  margin-block-end: 3vw;
 }
 .laboratory-info button {
-    margin-block-start: 5vw;
-    background-color: #FDC2F6;
-    color: black;
-    border: 1px solid black;
-    width: 100%;
-    padding: 3vw 0;
-    font-size: 5vw;
+  margin-block-start: 5vw;
+  background-color: #fdc2f6;
+  color: black;
+  border: 1px solid black;
+  width: 100%;
+  padding: 3vw 0;
+  font-size: 5vw;
 }
 .intresting {
-    margin-block-end: 15vw;
+  margin-block-end: 15vw;
 }
 .intresting h2 {
-    font-weight: 700;
-    font-size: 14vw;
-    margin-block-end: 1.5vw;
-    text-align: center;
+  font-weight: 700;
+  font-size: 14vw;
+  margin-block-end: 1.5vw;
+  text-align: center;
 }
 .intresting-things-container {
-    display: flex;
-    flex-direction: column;
-    gap: 7vw;
-    width: 95%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7vw;
+  width: 95%;
+  margin: 0 auto;
 }
 .intresting-thing {
-    background-color: #FDC2F6;
-    height: 150vw;
-    padding: 7vw 3vw;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: #fdc2f6;
+  height: 150vw;
+  padding: 7vw 3vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .intresting-thing p {
-    font-family: 'PlayenSans-Regular', Arial, sans-serif;
-    font-size: var(--font-size-small);
-    margin-block-end: 3vw;
+  font-family: "PlayenSans-Regular", Arial, sans-serif;
+  font-size: var(--font-size-small);
+  margin-block-end: 3vw;
 }
 .telefon {
-width: 50%;
-position: absolute;
-top: 15%;
-left: 40%;
+  width: 50%;
+  position: absolute;
+  top: 15%;
+  left: 40%;
 }
 .skotch {
-width: 30%;
-position: absolute;
-top: 45%;
-left: 10%;
+  width: 30%;
+  position: absolute;
+  top: 45%;
+  left: 10%;
 }
 .tetrad {
-width: 50%;
-position: absolute;
-top: 55%;
-left: 40%;
+  width: 50%;
+  position: absolute;
+  top: 55%;
+  left: 40%;
 }
 .intresting button {
-    width: 100%;
-    background-color: black;
-    color: white;
-    padding: 2vw 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 2vw 0;
 }
 .plakat1 {
-    width: 50%;
-    position: absolute;
-    top: 15%;
-    left: 40%;
+  width: 50%;
+  position: absolute;
+  top: 15%;
+  left: 40%;
 }
 
 .plakat2 {
-    width: 50%;
-    position: absolute;
-    top: 30%;
-    left: 10%;
+  width: 50%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
 }
 
 .calendar {
-    width: 55%;
-    position: absolute;
-    top: 55%;
-    left: 40%;   
+  width: 55%;
+  position: absolute;
+  top: 55%;
+  left: 40%;
 }
 
 footer {
-    background-image: url(../images/Gradient.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 65vh;
-    padding: 13vw 3vw;
-    display: flex;
-    justify-content: space-between;
+  background-image: url(../images/Gradient.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 65vh;
+  padding: 13vw 3vw;
+  display: flex;
+  justify-content: space-between;
 }
 footer h2 {
-    font-weight: 700;
-    color: white;
-    font-size: 20vw;
-    margin-block-end: 3vw;
-    line-height: 0.6;
+  font-weight: 700;
+  color: white;
+  font-size: 20vw;
+  margin-block-end: 3vw;
+  line-height: 0.6;
 }
 footer p {
-    font-size: var(--font-size-small);
-    color: white;
+  font-size: var(--font-size-small);
+  color: white;
 }
 .footer-info {
-    flex: 3;
+  flex: 3;
 }
 
 nav {
-    align-self: center;
-    flex: 3;
-    margin: 0 auto;
+  align-self: center;
+  flex: 3;
+  margin: 0 auto;
 }
 .poloska {
-    align-self: flex-end;
-    flex: 1;
-    color:white ;
+  align-self: flex-end;
+  flex: 1;
+  color: white;
+}
+/* --------------------------для детей--------------------------- */
+.kids-header {
+  background-image: url(../images/devochka.webp);
+  margin-block-end: 17vw;
+}
+
+.kids-logo {
+  font-size: 35vw;
+  line-height: 1;
+  margin-block-end: -2vw;
+}
+
+.kids-container {
+  width: 90vw;
+  height: 90vh;
+}
+.kids-rasshifrovka {
+  font-size: 7vw;
+}
+.about-game-left h2 {
+  font-size: var(--font-size-big);
+  font-weight: 700;
+  text-align: center;
+  margin-block-end: 1.5vw;
+}
+
+.about-game-left {
+  margin-block-end: 9vw;
+}
+
+.about-game p {
+  font-family: "PlayenSans-Regular", Arial, sans-serif;
+  font-size: 5vw;
+  margin-block-end: 3vw;
+  padding: 0 3vw;
+}
+.nout-devochka {
+  padding: 0 3vw;
+  margin-block-end: 12vw;
+}
+.mockapchic-telefon {
+  height: 128vw;
+  object-fit: cover;
+  margin-block-start: 10vw;
+  margin-block-end: 12vw;
+}
+.play-container {
+  margin-block-start: 10vw;
+  background-image: url(../images/mockap2.webp);
+  display: flex;
+  height: 140vw;
+  justify-content: center;
+  align-items: center;
+  background-position: 60% 50%;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  padding: 0 3vw;
+}
+.play-container button {
+  margin-block-start: 5vw;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  padding: 3vw 0;
+  font-size: 5vw;
+}
+/* ----------------------------путеводитель------------------------------------- */
+
+.putevod-logo {
+  font-size: 18vw;
+}
+.putevod-header {
+  background-image: url(../images/putevod.webp);
+  margin-block-end: 17vw;
+}
+.putevod-info h2 {
+  font-size: var(--font-size-big);
+  font-weight: 700;
+  text-align: center;
+  margin-block-end: 1.5vw;
+}
+.putevod-main {
+  margin-block-end: 10vw;
+}
+.putevod-main p {
+  font-family: "PlayenSans-Regular", Arial, sans-serif;
+  font-size: 5vw;
+  margin-block-end: 3vw;
+  padding: 0 3vw;
+}
+.putevod-page1 {
+  margin-block-end: 7vw;
+  padding: 0 5vw;
+}
+
+.putevod-info {
+  margin-block-end: 14vw;
+}
+.gallery-grid {
+  padding: 0 3vw;
+}
+.gallery-grid img {
+  margin-block-end: 7vw;
+}
+
+.putevod-page5 {
+  margin-block-start: 7vw;
+  height: 140vw;
+  object-fit: cover;
+}
+.gallery-grid button {
+  margin-block-start: 5vw;
+  background-color: #fdc2f6;
+  color: black;
+  border: 1px solid black;
+  width: 100%;
+  padding: 3vw 0;
+  font-size: 5vw;
+}
+
+/* ---------------------------------------404------------------------------------------------- */
+.header-404 {
+  background-image: url(../images/404.png);
 }
