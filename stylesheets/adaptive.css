@@ -1,99 +1,108 @@
 @media (width > 1000px) {
-  .burger-menu {
-    display: none;
+    .burger-menu {
+      display: none;
+    }
+    header {
+      background-size: cover;
+      height: 60vw;
+      align-items: start;
+    }
+    header nav {
+      display: block;
+      margin-block-end: 20vw;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 5vw;
+    }
+    .nav-list a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25vw;
+    }
+    .svg-overlay {
+      display: block;
+    }
+    .container {
+      margin-block-start: 0;
+      height: 69%;
+      align-items: center;
+      padding-block-start: 1vw;
+    }
+    .logo {
+      font-size: 15vw;
+      margin-block-end: 1vw;
+    }
+    .rasshifrovka {
+      font-size: 2.5vw;
+      margin-block-end: 3vw;
+    }
+    .podrobnee {
+      width: 30%;
+      font-size: 1.4vw;
+      padding: 1vw 0;
+    }
+    .alternat {
+      background-color: white;
+      padding-block-start: 3vw;
+      padding: 3vw 2vw 0 3vw;
+      margin-block-end: -2vw;
+    }
+    .alternat h2 {
+      display: block;
+      font-size: 19vw;
+      text-align: center;
+      font-weight: 700;
+    }
+    .alternat-container {
+      flex-direction: row;
+      gap: 2vw;
+      position: relative;
+      top: -8vw;
+    }
+    .cartochka {
+      width: 31vw;
+      height: 32.1vw;
+      padding: 3vw;
+    }
+    .cartochka-info h3 {
+      font-size: 2.5vw;
+    }
+    .cartochka-info p {
+      font-size: 1vw;
+    }
+    .cartochka button {
+      padding: 0.5vw 0;
+    }
+    .laboratory-info h2 {
+      font-size: 3.2vw;
+      margin-block-end: 1.5vw;
+      text-align: left;
+    }
+    .laboratory-info p {
+      font-size: 1vw;
+      margin-block-end: 1vw;
+    }
+    .laboratory-info button {
+      margin-block-start: 2vw;
+      border: 1px solid black;
+      width: 100%;
+      padding: 1vw 0;
+      font-size: 1.5vw;
+      
+    }
+    .laboratory {
+      display: flex;
+      justify-content: space-between;
+    }
+    .laboratory-info {
+      width: 30%;
+      margin: 0 6vw 0 3vw;
+    }
+    .laboratory img {
+      width: 55%;
+    }
+
   }
-  header {
-    background-size: cover;
-    height: 60vw;
-    align-items: start;
-  }
-  header nav {
-    display: block;
-  }
-  .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 5vw;
-  }
-  .nav-list a {
-    color: white;
-    text-decoration: none;
-  }
-  .container {
-    justify-content: space-between;
-    margin-block-start: 0;
-    height: 69%;
-    align-items: center;
-    padding-block-start: 1vw;
-  }
-  .logo {
-    font-size: 15vw;
-    margin-block-end: 1vw;
-  }
-  .rasshifrovka {
-    font-size: 2.5vw;
-    margin-block-end: 3vw;
-  }
-  .podrobnee {
-    width: 30%;
-    font-size: 1.4vw;
-    padding: 1vw 0;
-  }
-  .alternat {
-    background-color: white;
-    padding-block-start: 3vw;
-    padding: 3vw 2vw;
-  }
-  .alternat h2 {
-    display: block;
-    font-size: 19vw;
-    text-align: center;
-    font-weight: 700;
-  }
-  .alternat-container {
-    flex-direction: row;
-    gap: 2vw;
-    position: relative;
-    top: -8vw;
-  }
-  .cartochka {
-    width: 31vw;
-    height: 32.1vw;
-    padding: 3vw;
-  }
-  .cartochka-info h3 {
-    font-size: 2.5vw;
-  }
-  .cartochka-info p {
-    font-size: 1vw;
-  }
-  .cartochka button {
-    padding: 0.5vw 0;
-  }
-  .laboratory-info h2 {
-    font-size: 3.2vw;
-    margin-block-end: 1.5vw;
-  }
-  .laboratory-info p {
-    font-size: 1vw;
-    margin-block-end: 3vw;
-  }
-  .laboratory-info button {
-    margin-block-start: 2vw;
-    border: 1px solid black;
-    width: 50%;
-    padding: 1vw 0;
-    font-size: 1.5vw;
-  }
-  .laboratory {
-    display: flex;
-  }
-  .laboratory-info {
-    flex: 1;
-    flex-shrink: 0;
-    width: 100%;
-  }
-  .laboratory img {
-    flex: 2;
-  }
-}
+  
