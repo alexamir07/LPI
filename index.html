@@ -53,30 +53,22 @@
         <img src="./images/Menu.svg" alt="бургер" />
       </button>
 
-      <div class="svg-overlay">
-        <svg
-          width="221"
-          height="396"
-          viewBox="0 0 221 396"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12.421 352.684L218.764 394.369L199.392 345.139L103.175 200.207L90.9024 3.99997L1.82492 183.282L12.421 352.684Z"
-            fill="white"
-            fill-opacity="0.01"
-            stroke="white"
-            stroke-width="2"
-          />
-          <defs>
-            <clipPath id="svgClipPath">
-              <path
-                d="M12.421 352.684L218.764 394.369L199.392 345.139L103.175 200.207L90.9024 3.99997L1.82492 183.282L12.421 352.684Z"
-              />
-            </clipPath>
-          </defs>
+      <svg width="0" height="0" style="position:absolute;">
+        <defs>
+          <clipPath id="my-shard-shape" clipPathUnits="objectBoundingBox">
+            <path d="M0.211,0.985 L0.999,0.945 L0.891,0.838 L0.397,0.523 L0.150,0.011 L0.007,0.552 L0.211,0.995 Z" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <div class="glass-shard-container">
+  
+        <svg class="shard-border" viewBox="0 0 269 363" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M56.8302 361.073L266.851 346.721L235.153 304.364L104.043 190.027L40.3331 4.04634L1.82411 200.499L56.8302 361.073Z" stroke="white" stroke-width="3"/>
         </svg>
+        
       </div>
+      
     </header>
     <main>
       <section class="alternat">
@@ -186,3 +178,4 @@
     </footer>
     <script src="javascript/scripts.js"></script>
   </body>
+</html>

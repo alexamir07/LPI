@@ -1,28 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Афиша</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="javascript/scripts.js"></script>
-</head>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
 
-<body>
-    <nav>
-        <div class="main-menu">
-            <a href="index.html">главная</a>
-            <div class="links">
-                <a href="shop.html">магазин</a>
-                <a href="events.html">афиша</a>
-                <a href="laboratory.html">лаборатория</a>
-                <a href="putevod.html">путеводитель</a>
-                <a href="kids.html">для детей</a>
-            </div>
+  <body>
+    <header class="events-header">
+      <div class="container">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">главная</a></li>
+            <li><a href="shop.html">магазин</a></li>
+            <li><a href="events.html">афиша</a></li>
+            <li><a href="laboratory.html">лаборатория</a></li>
+            <li><a href="putevod.html">путеводитель</a></li>
+            <li><a href="kids.html">для детей</a></li>
+          </ul>
+        </nav>
+        <div class="logo kids-logo">афиша</div>
+        <p class="rasshifrovka kids-rasshifrovka">
+          интересные лекции и события
+        </p>
+        <a
+          class="podrobnee"
+          href="https://alexamir07.github.io/dom_zerkal/"
+          target="_blank"
+          >записаться на лекции</a
+        >
+      </div>
+
+      <div class="arrow-wrapper">
+        <img class="down-arrow" src="/images/down_arrow.svg" alt="" />
+      </div>
+
+      <button class="burger-menu">
+        <img src="./images/Menu.svg" alt="бургер" />
+      </button>
+    </header>
+
+    <main class="events-main">
+      <div class="events-info-container">
+        <div class="events-info-left">
+          <h2>Афиша мероприятий и лекций</h2>
+          <p>
+            На этой странице вы найдете актуальное расписание лекций, открытых
+            семинаров и специальных мероприятий Лаборатории Пограничных
+            Исследований. Мы делимся последними наблюдениями, обсуждаем теорию
+            разлома, работу с альтернативами, вопросы психической устойчивости и
+            этики в условиях пограничной реальности.
+          </p>
+          <p>
+            Некоторые события открыты для широкой публики, другие — только для
+            зарегистрированных специалистов. Следите за обновлениями и не
+            пропустите возможность заглянуть по ту сторону отражения — безопасно
+            и под контролем.
+          </p>
+          <a
+            href="https://hsedesign.ru/project/a96d6b736c8049ca904a4d0cbd2056db"
+            class="lectures-button"
+            target="_blank"
+            >посмотреть все лекции</a
+          >
         </div>
-    </nav>
-    <h1>афиша</h1>
-</body>
+        <img
+          class="events-info-right"
+          src="./images/aifon.webp"
+          alt="телефоны"
+        />
+      </div>
+      <h2>Предстоящие события</h2>
+      <div class="events-container">
+        <div class="event-card cartochka">
+          <img class="event-img" src="./images/plakat1.webp" alt="событие" />
+          <a href="putevod.html">записаться</a>
+        </div>
+        <div class="event-card cartochka">
+          <img class="event-img" src="./images/plakat2.webp" alt="событие" />
+          <a href="putevod.html">записаться</a>
+        </div>
+        <div class="event-card cartochka">
+          <img class="event-img" src="./images/plakat3.webp" alt="событие" />
+          <a href="putevod.html">записаться</a>
+        </div>
+      </div>
+      <a
+        href="https://hsedesign.ru/project/a96d6b736c8049ca904a4d0cbd2056db"
+        class="lectures-button bottom-button"
+        target="_blank"
+        >посмотреть плакат</a
+      >
+    </main>
 
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h2>ЛПИ</h2>
+          <p>лаборатория пограничных исследований</p>
+        </div>
+        <nav>
+          <ul class="footer-nav-list">
+            <li><a href="shop.html">магазин</a></li>
+            <li><a href="events.html">афиша</a></li>
+            <li><a href="laboratory.html">лаборатория</a></li>
+            <li><a href="putevod.html">путеводитель</a></li>
+            <li><a href="kids.html">для детей</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="poloska">2025 @lpi</div>
+    </footer>
+
+    <script src="javascript/scripts.js"></script>
+  </body>
 </html>

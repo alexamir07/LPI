@@ -1,28 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Лаборатория</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="javascript/scripts.js"></script>
-</head>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
 
-<body>
-    <nav>
-        <div class="main-menu">
-            <a href="index.html">главная</a>
-            <div class="links">
-                <a href="shop.html">магазин</a>
-                <a href="events.html">афиша</a>
-                <a href="laboratory.html">лаборатория</a>
-                <a href="putevod.html">путеводитель</a>
-                <a href="kids.html">для детей</a>
+  <body>
+    <header class="laboratory-header">
+      <div class="container">
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">главная</a></li>
+            <li><a href="shop.html">магазин</a></li>
+            <li><a href="events.html">афиша</a></li>
+            <li><a href="laboratory.html">лаборатория</a></li>
+            <li><a href="putevod.html">путеводитель</a></li>
+            <li><a href="kids.html">для детей</a></li>
+          </ul>
+        </nav>
+        <div class="logo laboratory-logo">лаборатория</div>
+        <p class="rasshifrovka kids-rasshifrovka">
+          узнайте как устроена лаборатория изнутри
+        </p>
+        <a
+          class="podrobnee"
+          href="https://alexamir07.github.io/dom_zerkal/"
+          target="_blank"
+          >узнать о лаборатории и альтернативах</a
+        >
+      </div>
+
+      <div class="arrow-wrapper">
+        <img class="down-arrow" src="/images/down_arrow.svg" alt="" />
+      </div>
+
+      <button class="burger-menu">
+        <img src="./images/Menu.svg" alt="бургер" />
+      </button>
+    </header>
+
+    <main>
+      <div class="interactive-image-container">
+        <!-- <img class="plan-img" src="./images/plan.webp" alt="" /> -->
+
+        <div
+          class="invisible-hotspot"
+          style="width: 22%; height: 15%; top: calc(5vw + (100% - 55vw) / 2.3); left: 22%"
+          onclick="showPopup('popup1')"
+        >Экспериментальная</div>
+        <div
+          class="invisible-hotspot"
+          style="width: 22%; height: 15%; top: calc(18.5vw + (100% - 55vw) / 2.3); left: 18%; color: #fdc2f6;"
+          onclick="showPopup('popup2')"
+        >Рабочая зона</div>
+        <div
+          class="invisible-hotspot"
+          style="width: 22%; height: 15%; top: calc(42.5vw + (100% - 55vw) / 2.3); left: 28%"
+          onclick="showPopup('popup3')"
+        >Коридор</div>
+        <div
+          class="invisible-hotspot"
+          style="width: 22%; height: 15%; top: calc(7vw + (100% - 55vw) / 2.3); left: 57%"
+          onclick="showPopup('popup4')"
+        >Зона зеркал</div>
+        <div
+          class="invisible-hotspot"
+          style="width: 22%; height: 15%; top: calc(24vw + (100% - 55vw) / 2.3); left: 64%"
+          onclick="showPopup('popup5')"
+        >Холл</div>
+
+        <div id="popup1" class="popup">
+            <div class="popup-content">
+                <button class="close-popup" onclick="hidePopup('popup1')"><img src="./images/krestic.svg" alt="закрыть"></button>
+                <img src="./images/exspirement.webp" alt="экспериментальная">
             </div>
         </div>
-    </nav>
-    <h1>лаборатория</h1>
-</body>
+        <div id="popup2" class="popup">
+            <div class="popup-content">
+                <button class="close-popup" onclick="hidePopup('popup2')"><img src="./images/krestic.svg" alt="закрыть"></button>
+                <img src="./images/work.webp" alt="рабочая">
+            </div>
+        </div>
+        <div id="popup3" class="popup">
+            <div class="popup-content">
+                <button class="close-popup" onclick="hidePopup('popup3')"><img src="./images/krestic.svg" alt="закрыть"></button>
+                <img src="./images/koridor.webp" alt="коридор">
+            </div>
+        </div>
+        <div id="popup4" class="popup">
+            <div class="popup-content">
+                <button class="close-popup" onclick="hidePopup('popup4')"><img src="./images/krestic.svg" alt="закрыть"></button>
+                <img src="./images/zerkal.webp" alt="зона зеркал">
+            </div>
+        </div>
+        <div id="popup5" class="popup">
+            <div class="popup-content">
+                <button class="close-popup" onclick="hidePopup('popup5')"><img src="./images/krestic.svg" alt="закрыть"></button>
+                <img src="./images/holl.webp" alt="холл">
+            </div>
+        </div>
+      </div>
+    </main>
 
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h2>ЛПИ</h2>
+          <p>лаборатория пограничных исследований</p>
+        </div>
+        <nav>
+          <ul class="footer-nav-list">
+            <li><a href="shop.html">магазин</a></li>
+            <li><a href="events.html">афиша</a></li>
+            <li><a href="laboratory.html">лаборатория</a></li>
+            <li><a href="putevod.html">путеводитель</a></li>
+            <li><a href="kids.html">для детей</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="poloska">2025 @lpi</div>
+    </footer>
+
+    <script src="javascript/scripts.js"></script>
+  </body>
 </html>

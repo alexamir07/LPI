@@ -15,6 +15,7 @@ body {
 }
 p {
   font-family: "PlayenSans-Regular", Arial, sans-serif;
+  line-height: 1.2;
   font-weight: 400;
 }
 img {
@@ -34,7 +35,7 @@ header {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 120vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,21 +57,39 @@ header nav {
   border: none;
 }
 
-.svg-overlay {
-  display: none;
+.glass-shard-container {
+  /* 1. Позиционирование и размер */
   position: absolute;
-  top: 50px;
-  left: 200px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  clip-path: url(#svgClipPath);
+  top: 15%;
+  left: 75%;
+  /* Размеры должны соответствовать пропорциям viewBox="0 0 269 363" */
+  width: 10vw; 
+  aspect-ratio: 269 / 363;
+  min-width: 150px;
+  /* Можно масштабировать, используя transform */
+  transform: rotate(20deg);
+
+  /* 2. Применяем размытие к фону */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  
+  /* 3. ОБРЕЗАЕМ сам контейнер по нашей фигуре */
+  /* ID должен совпадать с тем, что в <defs> */
+  clip-path: url(#my-shard-shape);
 }
+
+.shard-border {
+  /* 4. SVG с обводкой растягиваем на весь контейнер */
+  width: 100%;
+  height: 100%;
+}
+
 
 .container {
   display: flex;
   flex-direction: column;
   width: 82vw;
-  height: 80vh;
+  /* height: 80vh; */
   margin-block-start: 40vw;
 }
 .logo {
@@ -110,8 +129,8 @@ header nav {
 }
 .cartochka {
   background-image: url(../images/kartochka.webp);
-  height: 92vw;
   width: 93vw;
+  aspect-ratio: 344/363;
   display: flex;
   flex-direction: column;
   padding: 6vw 10vw;
@@ -132,7 +151,6 @@ header nav {
   font-size: var(--font-size-medium);
 }
 .cartochka-info p {
-  font-family: "PlayenSans-Regular", Arial, sans-serif;
   text-align: center;
   font-size: 3vw;
 }
@@ -166,7 +184,6 @@ header nav {
   text-align: center;
 }
 .laboratory-info p {
-  font-family: "PlayenSans-Regular", Arial, sans-serif;
   font-size: 5vw;
   margin-block-end: 3vw;
 }
@@ -205,7 +222,6 @@ header nav {
   justify-content: space-between;
 }
 .intresting-thing p {
-  font-family: "PlayenSans-Regular", Arial, sans-serif;
   font-size: var(--font-size-small);
   margin-block-end: 3vw;
 }
@@ -340,7 +356,6 @@ footer nav {
 }
 
 .about-game p {
-  font-family: "PlayenSans-Regular", Arial, sans-serif;
   font-size: 5vw;
   margin-block-end: 3vw;
   padding: 0 3vw;
@@ -408,10 +423,10 @@ footer nav {
   margin-block-end: 10vw;
 }
 .putevod-main p {
-  font-family: "PlayenSans-Regular", Arial, sans-serif;
   font-size: 5vw;
   margin-block-end: 3vw;
   padding: 0 3vw;
+  line-height: 1.2;
 }
 .putevod-page1 {
   margin-block-end: 7vw;
@@ -427,3 +442,196 @@ footer nav {
 .gallery-grid img {
   margin-block-end: 7vw;
 }
+
+.putevod-page5 {
+  margin-block-start: 7vw;
+  height: 140vw;
+  object-fit: cover;
+
+  overflow: visible;
+}
+.gallery-grid a {
+  margin-block-start: 5vw;
+  background-color: #fdc2f6;
+  color: black;
+  border: 1px solid black;
+  width: 100%;
+  padding: 3vw 0;
+  font-size: 5vw;
+}
+
+.gallery-grid-info-button-desktop {
+  display: none;
+}
+
+/* ---------------------------------------404------------------------------------------------- */
+.header-404 {
+  background-image: url(../images/404.png);
+}
+
+/* ---------------------------------------афиша------------------------------------------------- */
+
+.events-header {
+  background-image: url(../images/afisha.webp);
+  margin-block-end: 10vw;
+}
+
+.events-main {
+  padding: 0 5vw;
+}
+
+.events-main h2 {
+  font-size: 12vw;
+  font-weight: 700;
+  text-align: center;
+  margin-block-end: 5vw;
+}
+
+.events-main p {
+  font-size: 5vw;
+  margin-block-end: 5vw;
+  line-height: 1.2;
+}
+
+.lectures-button {
+  margin-block-start: 15vw;
+  background-color: #fdc2f6;
+  color: black;
+  border: 1px solid black;
+  width: 100%;
+  padding: 3vw 0;
+  font-size: 5vw;
+  margin-block-end: 22vw;
+}
+
+.events-info-right {
+  margin-block-end: 22vw;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9vw;
+}
+
+.event-card {
+  width: 88vw;
+  aspect-ratio: 344/363;
+}
+
+.event-img {
+  width: 60%;
+  margin: auto 0;
+}
+
+.event-card a {
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 2vw 0;
+}
+
+/* ---------------------------------------магазин------------------------------------------------- */
+
+.shop-header {
+  background-image: url(../images/merch.webp);
+  margin-block-end: 16vw;
+}
+
+.shop-main {
+  margin-block-end: 10vw;
+}
+
+.shop-button {
+  margin-block-start: 8vw;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 3vw 0;
+  font-size: 5vw;
+  margin-block-end: 16vw;
+}
+
+.shop-card {
+  background-image: url(../images/cartochka1.webp);
+}
+
+.shop-img {
+  margin: auto 0;
+  width: 50%;
+}
+
+.notebook {
+  width: 70%;
+  transform: translate(-8%);
+}
+
+/* ---------------------------------------лаборатория------------------------------------------------- */
+
+.laboratory-header {
+  background-image: url(../images/laborat.webp);
+  background-position: top left;
+  background-size: 470%;
+  margin-block-end: 10vw;
+}
+
+.laboratory-logo {
+  font-size: 18vw;
+}
+
+.plan-img {
+  margin: 5vw auto;
+}
+
+.interactive-image-container {
+  display: none;
+  position: relative;
+  background-image: url(../images/plan.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  height: 100vh;
+}
+
+.invisible-hotspot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  border-radius: 5px;
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close-popup {
+  position: absolute;
+  top: 1vw;
+  right: 3vw;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
