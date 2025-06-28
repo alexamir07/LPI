@@ -22,8 +22,12 @@ img {
   height: auto;
   display: block;
 }
-button {
+a {
   font-family: "BebasNeue", Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
 }
 header {
   background-image: url(../images/altushki.webp);
@@ -39,6 +43,11 @@ header {
 header nav {
   display: none;
 }
+
+.down-arrow {
+  display: none;
+}
+
 .burger-menu {
   position: absolute;
   right: 2%;
@@ -127,11 +136,10 @@ header nav {
   text-align: center;
   font-size: 3vw;
 }
-.cartochka button {
+.cartochka a {
   width: 100%;
   background-color: black;
   color: white;
-  font-family: "BebasNeue", Arial, sans-serif;
   padding: 2vw 0;
 }
 .kniga-img {
@@ -162,7 +170,7 @@ header nav {
   font-size: 5vw;
   margin-block-end: 3vw;
 }
-.laboratory-info button {
+.laboratory-info a {
   margin-block-start: 5vw;
   background-color: #fdc2f6;
   color: black;
@@ -219,7 +227,7 @@ header nav {
   top: 55%;
   left: 40%;
 }
-.intresting button {
+.intresting a {
   width: 100%;
   background-color: black;
   color: white;
@@ -293,8 +301,8 @@ footer nav {
 
 .footer-nav-list a {
   color: white;
-    text-decoration: none;
-    font-size: 6vw;
+  text-align: left;
+  font-size: 6vw;
 }
 
 .poloska {
@@ -337,6 +345,11 @@ footer nav {
   margin-block-end: 3vw;
   padding: 0 3vw;
 }
+
+.top-text-desktop {
+  display: none;
+}
+
 .nout-devochka {
   padding: 0 3vw;
   margin-block-end: 12vw;
@@ -359,7 +372,7 @@ footer nav {
   background-size: 300%;
   padding: 0 3vw;
 }
-.play-container button {
+.play-container a {
   margin-block-start: 5vw;
   background-color: #000000;
   color: rgb(255, 255, 255);
@@ -367,6 +380,11 @@ footer nav {
   width: 100%;
   padding: 3vw 0;
   font-size: 5vw;
+}
+
+.kids-footer {
+  margin-block-start: 10vw;
+  background-image: url(../images/Gradient2.webp);
 }
 /* ----------------------------путеводитель------------------------------------- */
 
@@ -377,7 +395,10 @@ footer nav {
   background-image: url(../images/putevod.webp);
   margin-block-end: 17vw;
 }
-.putevod-info h2 {
+.putevod-info-header-desktop {
+  display: none;
+}
+.putevod-info-header-mobile {
   font-size: var(--font-size-big);
   font-weight: 700;
   text-align: center;
@@ -405,26 +426,4 @@ footer nav {
 }
 .gallery-grid img {
   margin-block-end: 7vw;
-}
-
-.putevod-page5 {
-  margin-block-start: 7vw;
-  height: 140vw;
-  object-fit: cover;
-
-  overflow: visible;
-}
-.gallery-grid button {
-  margin-block-start: 5vw;
-  background-color: #fdc2f6;
-  color: black;
-  border: 1px solid black;
-  width: 100%;
-  padding: 3vw 0;
-  font-size: 5vw;
-}
-
-/* ---------------------------------------404------------------------------------------------- */
-.header-404 {
-  background-image: url(../images/404.png);
 }
