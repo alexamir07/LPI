@@ -12,7 +12,13 @@
 body {
   font-family: "BebasNeue", Arial, sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
+
+main{
+  position: relative;
+}
+
 p {
   font-family: "PlayenSans-Regular", Arial, sans-serif;
   line-height: 1.2;
@@ -30,6 +36,12 @@ a {
   display: block;
   text-decoration: none;
 }
+
+button {
+  border: none;
+  background: none;
+}
+
 header {
   background-image: url(../images/altushki.webp);
   background-position: center top;
@@ -41,8 +53,48 @@ header {
   align-items: center;
   position: relative;
 }
-header nav {
+.desktop-nav {
   display: none;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding-top: 70px;
+  background-image: url(../images/blackgradient.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mobile-nav-list li {
+  margin: 5vw 0;
+}
+
+.mobile-nav-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 8vw;
 }
 
 .down-arrow {
@@ -55,35 +107,97 @@ header nav {
   top: 2%;
   background: none;
   border: none;
+  z-index: 101;
 }
 
-.glass-shard-container {
-  /* 1. Позиционирование и размер */
+/* .glass-shard-container {
+  display: none;
   position: absolute;
   top: 15%;
   left: 75%;
-  /* Размеры должны соответствовать пропорциям viewBox="0 0 269 363" */
   width: 10vw; 
   aspect-ratio: 269 / 363;
   min-width: 150px;
-  /* Можно масштабировать, используя transform */
   transform: rotate(20deg);
-
-  /* 2. Применяем размытие к фону */
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  
-  /* 3. ОБРЕЗАЕМ сам контейнер по нашей фигуре */
-  /* ID должен совпадать с тем, что в <defs> */
   clip-path: url(#my-shard-shape);
+} */
+
+.glass-shard {
+  display: none;
+  position: absolute; 
+  -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
+  pointer-events: none;
 }
 
-.shard-border {
-  /* 4. SVG с обводкой растягиваем на весь контейнер */
+.glass-shard .shard-border {
   width: 100%;
   height: 100%;
 }
 
+.shard-0 {
+  top: 5%;
+  left: 12%;
+  width: 14vw; 
+  min-width: 150px;
+  transform: rotate(10deg);
+
+  aspect-ratio: 269 / 363;
+  clip-path: url(#shard-shape-0);
+}
+
+.shard-1 {
+  width: 8vw; 
+  min-width: 90px; 
+  top: 25%;
+  left: 5%;
+  
+  aspect-ratio: 135 / 371; 
+  clip-path: url(#shard-shape-1);
+}
+
+.shard-2 {
+  width: 12vw;
+  min-width: 200px;
+  top: 60%;
+  left: 15%;
+  transform: rotate(100deg);
+  
+  aspect-ratio: 253 / 363;
+  clip-path: url(#shard-shape-2);
+}
+
+.shard-3 {
+  width: 22vw;
+  min-width: 280px;
+  top: 3%;
+  left: 65%;
+  
+  aspect-ratio: 407 / 253;
+  clip-path: url(#shard-shape-3);
+}
+
+.shard-4 {
+  width: 15vw;
+  min-width: 160px;
+  top: 30%;
+  left: 82%;
+  
+  aspect-ratio: 274 / 470;
+  clip-path: url(#shard-shape-4);
+}
+
+.shard-5 {
+  width: 14vw;
+  min-width: 190px;
+  top: 70%;
+  left: 70%;
+  
+  aspect-ratio: 290 / 302;
+  clip-path: url(#shard-shape-5);
+}
 
 .container {
   display: flex;
@@ -99,6 +213,7 @@ header nav {
   text-align: center;
   margin-block-end: 3vw;
   line-height: 0.6;
+  z-index: 1;
 }
 .rasshifrovka {
   font-size: var(--font-size-medium);
@@ -108,6 +223,8 @@ header nav {
   margin-block-end: 32vw;
 }
 .podrobnee {
+  cursor: pointer;
+  font-family: "BebasNeue", Arial, sans-serif;
   background-color: black;
   border: 1px solid white;
   color: white;
@@ -277,6 +394,7 @@ footer {
   /* height: 65vh; */
   padding: 13vw 5vw;
   padding-block-end: 2vw;
+  position: relative;
 }
 
 .footer-container {
@@ -344,6 +462,7 @@ footer nav {
 .kids-rasshifrovka {
   font-size: 7vw;
 }
+
 .about-game-left h2 {
   font-size: var(--font-size-big);
   font-weight: 700;
@@ -398,6 +517,7 @@ footer nav {
 }
 
 .kids-footer {
+  overflow-y: hidden;
   margin-block-start: 10vw;
   background-image: url(../images/Gradient2.webp);
 }
@@ -474,6 +594,10 @@ footer nav {
 .events-header {
   background-image: url(../images/afisha.webp);
   margin-block-end: 10vw;
+}
+
+.event-logo {
+  font-size: 35vw;
 }
 
 .events-main {
@@ -634,4 +758,124 @@ footer nav {
   cursor: pointer;
 }
 
+/* ---------------------------------------форма------------------------------------------------- */
+.form-open-btn {
+  font-family: "BebasNeue", Arial, sans-serif;
+  cursor: pointer;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 3vw 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.modal-content {
+  background-image: url(../images/4\ 2.webp);
+  background-size: cover;
+  margin: 2% auto;
+  padding:6vw;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 90%;
+  max-width: 600px;
+  animation: modalopen 0.3s;
+}
+
+@keyframes modalopen {
+  from {opacity: 0; transform: translateY(-50px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.close-btn {
+  float: right;
+  width: 48px;
+  cursor: pointer;
+}
+
+/* Стили для формы */
+.form-title {
+  font-size: 10vw;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin-block-start: 15vw;
+  margin-block-end: 4vw;
+  clear: both;
+}
+
+.form-subtitle {
+  font-size: 4vw;
+  color: white;
+  text-align: center;
+  margin-block-end: 10vw;
+}
+
+.form-group {
+  margin-block-end: 6vw;
+}
+
+label {
+  display: block;
+  font-family: "PlayenSans-Regular", Arial, sans-serif;
+  color: white;
+  font-size: 4vw;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.name-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn {
+  font-family: "BebasNeue", Arial, sans-serif;
+  width: 100%;
+  padding: 14px;
+  background-color: #FFD9F4;
+  color: black;
+  font-size: 6vw;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #961da1;
+}
+
+.non-glass-shard {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+}
+
+.non-glass-shard-1 {
+  width: 10vw;
+}
+
+.non-glass-shard-2 {
+  width: 18vw;
+}
+
+.non-glass-shard-3 {
+  width: 12vw;
+}
 

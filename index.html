@@ -9,28 +9,28 @@
       rel="preload"
       href="./fonts/BebasNeue-Bold.ttf"
       as="font"
-      type="font/truetype"
+      type="font/ttf"
       crossorigin
     />
     <link
       rel="preload"
       href="./fonts/BebasNeue-Regular.ttf"
       as="font"
-      type="font/truetype"
+      type="font/ttf"
       crossorigin
     />
     <link
       rel="preload"
       href="./fonts/PlayenSans-Regular.ttf"
       as="font"
-      type="font/truetype"
+      type="font/ttf"
       crossorigin
     />
   </head>
   <body>
     <header>
       <div class="container">
-        <nav>
+        <nav class="desktop-nav">
           <ul class="nav-list">
             <li><a href="index.html">главная</a></li>
             <li><a href="shop.html">магазин</a></li>
@@ -42,33 +42,177 @@
         </nav>
         <div class="logo">ЛПИ</div>
         <p class="rasshifrovka">лаборатория пограничных исследований</p>
-        <a class="podrobnee" href="">узнать о лаборатории и альтернативах</a>
+        <a
+          class="podrobnee"
+          href="https://hsedesign.ru/project/f53f1799134f45b78923db73c84f5502"
+          target="_blank"
+          >узнать о лаборатории и альтернативах</a
+        >
       </div>
 
       <div class="arrow-wrapper">
-        <img class="down-arrow" src="/images/down_arrow.svg" alt="">
+        <img class="down-arrow" src="/images/down_arrow.svg" alt="" />
       </div>
 
       <button class="burger-menu">
-        <img src="./images/Menu.svg" alt="бургер" />
+        <img class="burger-icon" src="./images/Menu.svg" alt="бургер" />
       </button>
 
-      <svg width="0" height="0" style="position:absolute;">
+      <div class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html">главная</a></li>
+          <li><a href="shop.html">магазин</a></li>
+          <li><a href="events.html">афиша</a></li>
+          <li><a href="laboratory.html">лаборатория</a></li>
+          <li><a href="putevod.html">путеводитель</a></li>
+          <li><a href="kids.html">для детей</a></li>
+        </ul>
+      </div>
+
+      <svg width="0" height="0" style="position: absolute">
         <defs>
-          <clipPath id="my-shard-shape" clipPathUnits="objectBoundingBox">
-            <path d="M0.211,0.985 L0.999,0.945 L0.891,0.838 L0.397,0.523 L0.150,0.011 L0.007,0.552 L0.211,0.995 Z" />
+          <clipPath id="shard-shape-0" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.211,0.985 L0.999,0.945 L0.891,0.838 L0.397,0.523 L0.150,0.011 L0.007,0.552 L0.211,0.995 Z"
+            />
+          </clipPath>
+
+          <clipPath id="shard-shape-1" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.01,0.874 L0.994,0.997 L0.684,0.874 L0.549,0.737 L0.549,0.003 L0.226,0.428 L0.01,0.874 Z"
+            />
+          </clipPath>
+
+          <clipPath id="shard-shape-2" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.523,0.762 L0.957,0.994 L0.992,0.598 L0.512,0.414 L0.666,0.011 L0.009,0.477 L0.523,0.762 Z"
+            />
+          </clipPath>
+
+          <clipPath id="shard-shape-3" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.002,0.728 L0.498,0.848 L0.74,0.993 L0.793,0.735 L0.993,0.012 L0.588,0.486 L0.002,0.728 Z"
+            />
+          </clipPath>
+
+          <clipPath id="shard-shape-4" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.532,0.94 L0.992,0.995 L0.898,0.756 L0.898,0.581 L0.006,0.002 L0.489,0.542 L0.532,0.94 Z"
+            />
+          </clipPath>
+
+          <clipPath id="shard-shape-5" clipPathUnits="objectBoundingBox">
+            <path
+              d="M0.006,0.439 L0.282,0.99 L0.495,0.661 L0.805,0.436 L0.992,0.01 L0.337,0.38 L0.006,0.439 Z"
+            />
           </clipPath>
         </defs>
       </svg>
 
-      <div class="glass-shard-container">
-  
-        <svg class="shard-border" viewBox="0 0 269 363" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M56.8302 361.073L266.851 346.721L235.153 304.364L104.043 190.027L40.3331 4.04634L1.82411 200.499L56.8302 361.073Z" stroke="white" stroke-width="3"/>
+      <div class="glass-shard shard-0">
+        <svg
+          class="shard-border"
+          viewBox="0 0 269 363"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M56.8302 361.073L266.851 346.721L235.153 304.364L104.043 190.027L40.3331 4.04634L1.82411 200.499L56.8302 361.073Z"
+            stroke="white"
+            stroke-width="2"
+          />
         </svg>
-        
       </div>
-      
+
+      <div class="glass-shard shard-1">
+        <svg
+          class="shard-border"
+          viewBox="0 0 135 371"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.35397 324.139L134.25 369.74L92.3829 324.139L74.05 273.46L74.05 1.15857L30.4642 158.77L1.35397 324.139Z"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+
+      <div class="glass-shard shard-2">
+        <svg
+          class="shard-border"
+          viewBox="0 0 253 363"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M132.204 276.542L242.033 360.727L250.975 217.112L129.628 150.403L168.476 3.89033L2.26513 173.041L132.204 276.542Z"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+
+      <div class="glass-shard shard-3">
+        <svg
+          class="shard-border"
+          viewBox="0 0 407 253"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.775334 184.085L202.85 214.608L301.413 251.292L322.606 185.88L404.006 3.15893L239.185 122.853L0.775334 184.085Z"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+
+      <div class="glass-shard shard-4">
+        <svg
+          class="shard-border"
+          viewBox="0 0 274 470"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M145.659 441.727L271.887 467.728L245.95 355.243L245.95 273.227L1.58574 1.00008L133.95 254.524L145.659 441.727Z"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+
+      <div class="glass-shard shard-5">
+        <svg
+          class="shard-border"
+          viewBox="0 0 290 302"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.7894 132.422L81.6472 299.128L143.531 199.614L233.536 131.748L287.746 3.11278L97.8223 114.621L1.7894 132.422Z"
+            stroke="white"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+
+      <!-- <div class="glass-shard-container">
+        <svg
+          class="shard-border"
+          viewBox="0 0 269 363"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M56.8302 361.073L266.851 346.721L235.153 304.364L104.043 190.027L40.3331 4.04634L1.82411 200.499L56.8302 361.073Z"
+            stroke="white"
+            stroke-width="3"
+          />
+        </svg>
+      </div> -->
     </header>
     <main>
       <section class="alternat">
@@ -146,8 +290,8 @@
               Лекции, выставки, разборы инцидентов — следите за активностями
               лаборатории в открытых зонах
             </p>
-            <img class="plakat1" src="./images/plakat2.webp" alt="плакат1" />
-            <img class="plakat2" src="./images/plakat1.webp" alt="плакат2" />
+            <img class="plakat1" src="./images/placatic2.webp" alt="плакат1" />
+            <img class="plakat2" src="./images/placatic1.webp" alt="плакат2" />
             <img
               class="calendar"
               src="./images/kalendar.webp"
@@ -157,6 +301,20 @@
           </div>
         </div>
       </section>
+
+      <img
+        class="non-glass-shard non-glass-shard-1"
+        src="./images/pink1.svg"
+        alt=""
+        style="top: 30%; left: 80%"
+      />
+
+      <img
+        class="non-glass-shard non-glass-shard-2"
+        src="./images/pink2.svg"
+        alt=""
+        style="top: 55%; left: 33%"
+      />
     </main>
     <footer>
       <div class="footer-container">
@@ -175,6 +333,20 @@
         </nav>
       </div>
       <div class="poloska">2025 @lpi</div>
+
+      <img
+        class="non-glass-shard non-glass-shard-2"
+        src="./images/pink2.svg"
+        alt=""
+        style="top: -15%; left: 53%"
+      />
+
+      <img
+        class="non-glass-shard non-glass-shard-3"
+        src="./images/pink3.svg"
+        alt=""
+        style="top: 25%; left: 23%"
+      />
     </footer>
     <script src="javascript/scripts.js"></script>
   </body>

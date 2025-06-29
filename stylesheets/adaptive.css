@@ -1,4 +1,4 @@
-@media (width > 1000px) {
+@media (width > 767px) {
   .burger-menu {
     display: none;
   }
@@ -8,9 +8,13 @@
     align-items: start;
     position: relative;
   }
-  header nav {
+  .desktop-nav {
     display: block;
     margin-block-end: 18vw;
+  }
+
+  .mobile-nav {
+    display: none;
   }
 
   .arrow-wrapper {
@@ -20,21 +24,25 @@
     transform: translateX(-50%);
     display: inline-block;
   }
-  
+
   .arrow-wrapper::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500%;
     height: 500%;
-    background: radial-gradient(ellipse, rgb(255, 255, 255) 30%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(
+      ellipse,
+      rgb(255, 255, 255) 30%,
+      rgba(255, 255, 255, 0) 70%
+    );
     filter: blur(25px);
     z-index: -1;
     pointer-events: none;
   }
-  
+
   .down-arrow {
     display: block;
     width: 2.4vw;
@@ -42,7 +50,14 @@
     position: relative;
     z-index: 1;
   }
-  
+
+  /* .glass-shard-container {
+    display: block;
+  } */
+
+  .glass-shard {
+    display: block;
+  }
 
   .nav-list {
     list-style: none;
@@ -76,6 +91,12 @@
     font-size: 1.4vw;
     padding: 1vw 0;
   }
+
+  .form-open-btn {
+    padding: 0.5vw 0;
+    font-size: 1vw;
+  }
+
   .alternat {
     background-color: white;
     padding-block-start: 3vw;
@@ -259,16 +280,11 @@
   .kids-header {
     margin-block-end: 5vw;
   }
-  .kids-header nav {
-    margin-block-end: 16vw;
-  }
   .kids-logo {
-    margin-block-end: -1vw;
     line-height: 0.6;
-    margin-block-end: 2vw;
   }
   .kids-rasshifrovka {
-    margin-block-end: 2vw;
+    margin-block-start: 1vw;
   }
 
   .about-container-first {
@@ -541,16 +557,57 @@
 
   .interactive-image-container {
     display: block;
-  } 
+  }
 
   .laboratory-header {
     background-position: center;
     background-size: cover;
     margin-block-end: 0;
   }
-  
+
   .laboratory-logo {
     font-size: 15vw;
   }
 
+  /* ---------------------------------------форма------------------------------------------------- */
+  .modal-content {
+    max-width: 50%;
+    padding: 2vw 5vw;
+  }
+
+  .form-title {
+    margin-block-start: 4vw;
+    font-size: 3vw;
+    margin-block-end: 2vw;
+  }
+
+  .form-subtitle {
+    font-size: 1.5vw;
+    margin-block-end: 4vw;
+  }
+
+  .form-group {
+    margin-block-end: 2vw;
+  }
+
+  label {
+    font-size: 1.25vw;
+  }
+
+  .name-fields {
+    flex-direction: row;
+    gap: 1vw;
+  }
+
+  .name-fields .form-group {
+    flex: 1;
+  }
+
+  .submit-btn {
+    font-size: 1.5vw;
+  }
+
+  .non-glass-shard {
+    display: block;
+  }
 }
