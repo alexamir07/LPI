@@ -49,11 +49,13 @@
     height: auto;
     position: relative;
     z-index: 1;
+
+    opacity: 0; /* Начальная прозрачность */
+    transform: translateY(-20px); /* Начальное положение выше */
+    animation: arrowAppear 2s infinite ease-in-out; /* Анимация */
   }
 
-  /* .glass-shard-container {
-    display: block;
-  } */
+  
 
   .glass-shard {
     display: block;
@@ -64,11 +66,39 @@
     display: flex;
     gap: 5vw;
   }
+
   .nav-list a {
     color: white;
     text-decoration: none;
     font-size: 1.25vw;
+    transition: color 0.3s ease;
+
+    position: relative;
   }
+
+  .nav-list a:hover {
+    color: black;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  }
+
+  .nav-list a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background: rgba(255, 255, 255, 0.7); 
+    transform: scaleX(0); 
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-list a:hover::before {
+    transform: scaleX(1); 
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7); 
+}
+
   .svg-overlay {
     display: block;
   }
@@ -86,15 +116,16 @@
     font-size: 2.5vw;
     margin-block-end: 3vw;
   }
+
+  .form-open-btn {
+    padding: 1vw 0;
+    font-size: 1vw;
+  }
+
   .podrobnee {
     width: 30%;
     font-size: 1.4vw;
     padding: 1vw 0;
-  }
-
-  .form-open-btn {
-    padding: 0.5vw 0;
-    font-size: 1vw;
   }
 
   .alternat {
@@ -126,7 +157,8 @@
     font-size: 1vw;
   }
   .cartochka a {
-    padding: 0.5vw 0;
+    padding: 1vw 0;
+    font-size: 1vw;
   }
   .laboratory-info h2 {
     font-size: 3.2vw;
@@ -178,7 +210,7 @@
   }
 
   .intresting-thing a {
-    padding: 0.5vw 0;
+    padding: 1vw 0;
     width: 40%;
     align-self: center;
     margin-block-end: 3vw;
@@ -530,6 +562,20 @@
     color: black;
   }
 
+  .shop-nav a:hover {
+    color: white;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  }
+
+  .shop-nav a::before {
+    background: rgba(0, 0, 0, 0.7); 
+}
+
+.shop-nav a:hover::before {
+    transform: scaleX(1); 
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.7); 
+}
+
   .shop-header {
     margin-block-end: 3vw;
   }
@@ -610,4 +656,5 @@
   .non-glass-shard {
     display: block;
   }
+  
 }

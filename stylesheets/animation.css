@@ -1,9 +1,9 @@
 .non-glass-shard {
-    animation: rotate-clockwise 20s linear infinite;
+    animation: rotate-clockwise 40s linear infinite;
   }
 
 .glass-shard {
-    animation: rotate-clockwise 20s linear infinite;
+    animation: rotate-clockwise 40s linear infinite;
   }
   
   @keyframes rotate-clockwise {
@@ -14,3 +14,18 @@
       transform: rotate(360deg);
     }
   }
+
+  @keyframes arrowAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

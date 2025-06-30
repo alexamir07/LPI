@@ -103,6 +103,8 @@ header {
 
 .burger-menu {
   position: absolute;
+  width: 48px;
+  height: 48px;
   right: 2%;
   top: 2%;
   background: none;
@@ -110,19 +112,9 @@ header {
   z-index: 101;
 }
 
-/* .glass-shard-container {
-  display: none;
-  position: absolute;
-  top: 15%;
-  left: 75%;
-  width: 10vw; 
-  aspect-ratio: 269 / 363;
-  min-width: 150px;
-  transform: rotate(20deg);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  clip-path: url(#my-shard-shape);
-} */
+.burger-icon {
+  width: 100%;
+}
 
 .glass-shard {
   display: none;
@@ -256,6 +248,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .cartochka-info {
   display: flex;
   align-items: center;
